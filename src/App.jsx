@@ -9,7 +9,6 @@ import TrustSection from "./components/TrustSection";
 import DealerCTA from "./components/DealerCTA";
 import EnquiryForm from "./components/EnquiryForm";
 import Footer from "./components/Footer";
-import WhatsAppFloat from "./components/WhatsAppFloat";
 import MobileCTA from "./components/MobileCTA";
 
 export default function App() {
@@ -28,7 +27,6 @@ export default function App() {
         <EnquiryForm />
       </main>
       <Footer />
-      <WhatsAppFloat />
       <MobileCTA />
     </>
   );
