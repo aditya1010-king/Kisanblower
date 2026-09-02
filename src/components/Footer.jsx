@@ -20,6 +20,16 @@ const WEBSITE_HREF = "https://kisanblower.shop";
 const FOOTER_WHATSAPP_MESSAGE =
   "Hello Kisan Blower Udyog, I am interested in your agricultural spraying machinery. Please share more information.";
 
+// The internal ERP (sales, expenses, staff, attendance and salary). This is
+// a separate application on its own subdomain, not a page of this website,
+// which is why it sits on the bottom bar rather than in Quick Links: that
+// column is customer navigation, and staff sign-in is a different audience
+// answering a different question.
+//
+// Until the ERP is deployed this points at the planned subdomain. Change
+// the one line below if it ends up somewhere else.
+const ERP_URL = "https://erp.kisanblower.shop";
+
 export default function Footer() {
   const year = new Date().getFullYear();
 
@@ -87,6 +97,18 @@ export default function Footer() {
         <p>
           &copy; {year} {COMPANY_NAME}. All Rights Reserved.
         </p>
+
+        {/* Staff sign-in. Deliberately understated - the people who need it
+            know it is here, and customers' eyes pass over it. rel="noopener"
+            stops the opened tab from getting a handle back to this page. */}
+        <a
+          className="site-footer__admin"
+          href={ERP_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Admin
+        </a>
       </div>
     </footer>
   );
